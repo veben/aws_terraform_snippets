@@ -1,0 +1,20 @@
+# terraform
+**/.terraform/*
+*.tfstate
+*.tfstate.*
+crash.log
+
+# idea
+.idea
+!.idea/runConfigurations
+!.idea/terraform.xml
+data_config/migrate_collections/export/*
+**/env/*
+*.iml
+# external links in bin/
+bin/tfenv
+bin/terraform
+
+tmp/
+venv*/
+*.zip
