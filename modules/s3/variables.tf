@@ -1,11 +1,11 @@
 variable "region" {
   default = "eu-west-1"
 }
-variable "access_key" {
-  default = ""
+variable "profile" {
+  default = "p-dev"
 }
-variable "secret_key" {
-  default = ""
+variable "credentials_file" {
+  default = "~/.aws/credentials"
 }
 variable "bucket_name" {
   default = "aws-glue-pokemon-csv"

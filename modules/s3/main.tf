@@ -1,10 +1,10 @@
 provider "aws" {
-    access_key = var.access_key
-    secret_key = var.secret_key
-    region = var.region
+    region                  = var.region
+    shared_credentials_file = var.credentials_file
+    profile                 = var.profile
 }
 
-resource "aws_s3_bucket" "b" {
+resource "aws_s3_bucket" "bucket_test" {
   bucket = var.bucket_name
   acl    = "private"
 

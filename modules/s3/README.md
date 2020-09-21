@@ -1,52 +1,16 @@
 # Provide a S3 bucket
 
+> Last updated: 2020/09/21
+
 ## Initialization
 
-Initialize **Terraform** environement with this command:
+Initialize **Terraform** environment with this command:
 ```sh
 terraform init
 ```
 
-## Define S3 characteristics
-Define `main.tf` file like that:
-
-```
-provider "aws" {
-    access_key = var.access_key
-    secret_key = var.secret_key
-    region = var.region
-}
-
-resource "aws_s3_bucket" "b" {
-  bucket = var.bucket_name
-  acl    = "private"
-  tags = {
-    Name        = var.bucket_name
-    Environment = "Dev"
-  }
-}
-```
-
-## Define variables
-Define `variables.tf` file like that:
-
-```
-variable "region" {
-  default = "eu-west-1"
-}
-variable "access_key" {
-  default = "your access key..."
-}
-variable "secret_key" {
-  default = "your secret key..."
-}
-variable "bucket_name" {
-  default = "aws-glue-pokemon-csv"
-}
-```
-
 ## Plan
-Plan to verify differents steps:
+Plan to verify different steps:
 ```sh
 terraform plan -out "s3.tfplan"
 ```
@@ -55,8 +19,8 @@ Result:
 ```
 Terraform will perform the following actions:
 
-  # aws_s3_bucket.b will be created
-  + resource "aws_s3_bucket" "b" {
+  # aws_s3_bucket.bucket_test will be created
+  + resource "aws_s3_bucket" "bucket_test" {
       + acceleration_status         = (known after apply)
       + acl                         = "private"
       + arn                         = (known after apply)
@@ -92,8 +56,8 @@ terraform apply "s3.tfplan"
 
 Result:
 ```
-aws_s3_bucket.b: Creating...
-aws_s3_bucket.b: Creation complete after 3s [id=aws-glue-pokemon-csv]
+aws_s3_bucket.bucket_test": Creating...
+aws_s3_bucket.bucket_test": Creation complete after 3s [id=aws-glue-pokemon-csv]
 
 Apply complete! Resources: 1 added, 0 changed, 0 destroyed.
 
@@ -103,4 +67,10 @@ infrastructure, so keep it safe. To inspect the complete state
 use the `terraform show` command.
 
 State path: terraform.tfstate
+```
+
+## Destroy
+Delete related resources:
+```sh
+terraform destroy "s3.tfplan"
 ```
