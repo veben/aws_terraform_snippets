@@ -22,7 +22,7 @@ sudo apt-get update && sudo apt-get install terraform
 terraform -version
 ```
 
-## II. 📝 Initilization
+## II. 📝 Initialization
 
 ### 1. Create free tier account
 [https://portal.aws.amazon.com/gp/aws/developer/registration/index.html?nc2=h_ct&src=header_signup](https://portal.aws.amazon.com/gp/aws/developer/registration/index.html?nc2=h_ct&src=header_signup)
