@@ -1,0 +1,3 @@
+[submodule "aws_tf_apigateway_dynamodb"]
+	path = aws_tf_apigateway_dynamodb
+	url = https://github.com/veben/aws_tf_apigateway_dynamodb
