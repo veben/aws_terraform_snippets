@@ -1,6 +1,0 @@
-[submodule "aws_tf_apigateway_dynamodb"]
-	path = aws_tf_apigateway_dynamodb
-	url = https://github.com/veben/aws_tf_apigateway_dynamodb
-[submodule "aws_tf_s3_eventbridge_lambda_api"]
-	path = aws_tf_s3_eventbridge_lambda_api
-	url = https://github.com/veben/aws_tf_s3_eventbridge_lambda_api
